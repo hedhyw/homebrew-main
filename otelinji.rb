@@ -5,21 +5,21 @@
 class Otelinji < Formula
   desc "OpenTelemetry auto-instrumentation tool for Golang."
   homepage "https://github.com/hedhyw/homebrews"
-  version "0.2.5"
+  version "0.2.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/hedhyw/otelinji/releases/download/v0.2.5/otelinji_darwin_arm64.tar.gz"
-      sha256 "7eedae900a84c984adf1a1d34615c8f8250acf98d811f51c94820bf87fe25951"
+      url "https://github.com/hedhyw/otelinji/releases/download/v0.2.6/otelinji_darwin_arm64.tar.gz"
+      sha256 "eeb8eca28be7a241a4c281b760506d7961d455f52122f0c54527847b518b4a3a"
 
       def install
         bin.install "otelinji"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hedhyw/otelinji/releases/download/v0.2.5/otelinji_darwin_amd64.tar.gz"
-      sha256 "afdfe64da888b0d2030b435e5946f1fe1bdcfd338d3cc496e8704dc407a78594"
+      url "https://github.com/hedhyw/otelinji/releases/download/v0.2.6/otelinji_darwin_amd64.tar.gz"
+      sha256 "c48fd4bf20b43592ab72a086a48f6b1c68ae326904a991edc51ab51d91254628"
 
       def install
         bin.install "otelinji"
@@ -28,25 +28,25 @@ class Otelinji < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/hedhyw/otelinji/releases/download/v0.2.5/otelinji_linux_arm.tar.gz"
-      sha256 "31729688e486ce2b8cfb9862bb1717a20f08cf1863e9027319235c4ac78113b5"
-
-      def install
-        bin.install "otelinji"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/hedhyw/otelinji/releases/download/v0.2.5/otelinji_linux_amd64.tar.gz"
-      sha256 "49f8484aabc31aa8322477c64f9f936520bd24c0aa0142e438e1395a651e22eb"
+      url "https://github.com/hedhyw/otelinji/releases/download/v0.2.6/otelinji_linux_amd64.tar.gz"
+      sha256 "8a2070eff3e99e5d30311d44290a41b9d9fc8979766c7021239ac6071750509c"
 
       def install
         bin.install "otelinji"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hedhyw/otelinji/releases/download/v0.2.5/otelinji_linux_arm64.tar.gz"
-      sha256 "3687f4057ae9bd0c7d07984c44ae5895c807c854ff3c7a14373860ee4ec635a5"
+      url "https://github.com/hedhyw/otelinji/releases/download/v0.2.6/otelinji_linux_arm64.tar.gz"
+      sha256 "0ca6ca2aa327d1c7ff990c99c1d92742ef085f6a024e5ddb207f4b54f215d872"
+
+      def install
+        bin.install "otelinji"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/hedhyw/otelinji/releases/download/v0.2.6/otelinji_linux_arm.tar.gz"
+      sha256 "0626e26c618c01d00f6c890b9bddea9016dcacef9d3fe7f791831c1ac5693dcc"
 
       def install
         bin.install "otelinji"
