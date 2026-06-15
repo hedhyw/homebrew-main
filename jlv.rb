@@ -5,23 +5,23 @@
 class Jlv < Formula
   desc "JSON Log Viewer tool."
   homepage "https://github.com/hedhyw/homebrews"
-  version "1.6.0"
+  version "1.6.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hedhyw/json-log-viewer/releases/download/v1.6.0/jlv_darwin_amd64.tar.gz"
-      sha256 "89d76a9e862668f4573a7e2a0ace78f2552e45c0f300433db3229b8e1188203b"
+      url "https://github.com/hedhyw/json-log-viewer/releases/download/v1.6.1/jlv_darwin_amd64.tar.gz"
+      sha256 "b45d013ebf2549372412bbc88e520c1ed61fd742ae56548f84c332de42d48d91"
 
-      def install
+      define_method(:install) do
         bin.install "jlv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hedhyw/json-log-viewer/releases/download/v1.6.0/jlv_darwin_arm64.tar.gz"
-      sha256 "3e5eba6e656d29ff0e040c3d296373d5524d288f82d8845d69b1b78ecf1874be"
+      url "https://github.com/hedhyw/json-log-viewer/releases/download/v1.6.1/jlv_darwin_arm64.tar.gz"
+      sha256 "68ab1e4ab0b87a813421db77096c55283a5562d2cc875a814427e82520ab4cca"
 
-      def install
+      define_method(:install) do
         bin.install "jlv"
       end
     end
@@ -29,23 +29,23 @@ class Jlv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hedhyw/json-log-viewer/releases/download/v1.6.0/jlv_linux_amd64.tar.gz"
-      sha256 "35c1273615581d508ac7ef326a8c02abfb24c6e3f439f4d50b09771a98d7fed5"
-      def install
+      url "https://github.com/hedhyw/json-log-viewer/releases/download/v1.6.1/jlv_linux_amd64.tar.gz"
+      sha256 "902ae20bc3b75f7f506f4f04c99428cbef8fedbb5ca451e21d90d2b30f699bb2"
+      define_method(:install) do
         bin.install "jlv"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/hedhyw/json-log-viewer/releases/download/v1.6.0/jlv_linux_arm.tar.gz"
-      sha256 "27781956f9c7d290d0121aea7ed9d1ddab7403906feae7080e78544d15808dfb"
-      def install
+      url "https://github.com/hedhyw/json-log-viewer/releases/download/v1.6.1/jlv_linux_arm.tar.gz"
+      sha256 "75a84af5924b2c855f20ba61401f8a7857708e3faa9bc8a10cd74426b4e9aa13"
+      define_method(:install) do
         bin.install "jlv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hedhyw/json-log-viewer/releases/download/v1.6.0/jlv_linux_arm64.tar.gz"
-      sha256 "a30d0ef050911bdca9d4c0d6afa224bc339daae3ad7a6782a66a33678506160b"
-      def install
+      url "https://github.com/hedhyw/json-log-viewer/releases/download/v1.6.1/jlv_linux_arm64.tar.gz"
+      sha256 "651395ee2dbd16e125fdc8ebc67d2bf2188466507d1eeeaaa15dc4a7d6fcda47"
+      define_method(:install) do
         bin.install "jlv"
       end
     end
